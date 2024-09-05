@@ -1,0 +1,80 @@
+.header {
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  position: fixed;
+  transition: 0.5s;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+
+.nav {
+  height: var(--header-height);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__menu {
+    @media screen and (max-width: 767px) {
+      left: 0;
+      right: 0;
+      top: -100%;
+      width: 90%;
+      margin: 0 auto;
+      position: fixed;
+      transition: 0.4s;
+      padding: 2.5rem 0;
+      border-radius: 2rem;
+      z-index: var(--z-fixed);
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+      background-color: var(--container-color);
+    }
+  }
+
+  &__list {
+    display: flex;
+    row-gap: 1.5rem;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__link, &__logo, &__toggle {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+  }
+
+  &__toggle {
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+}
+
+.show-menu {
+  top: calc(var(--header-height) + 1rem); // 4 rem
+
+}
+
+.active-link {
+  position: relative;
+
+  &::before {
+    content: '';
+
+    left: 45%;
+    bottom: -0.75rem;
+
+    width: 5px;
+    height: 5px;
+
+    position: absolute;
+
+    border-radius: 50%;
+    background-color: var(--title-color);
+  }
+}
+
+.scroll-header {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}

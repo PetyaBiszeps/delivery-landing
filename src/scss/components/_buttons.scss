@@ -1,0 +1,40 @@
+.button {
+  color: #1A1A1A;
+  background-color: var(--first-color);
+
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+
+  transition: 0.3s;
+  border-radius: 3rem;
+  font-weight: var(--font-semi-bold);
+
+  &:hover {
+    background-color: var(--first-color-alt);
+  }
+
+  &__header {
+    display: none;
+  }
+
+  &-link {
+    color: var(--title-color);
+    padding: 0;
+    background: none;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &-flex {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.25rem;
+    padding: 0.75rem 1rem;
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+  }
+}
