@@ -1,6 +1,7 @@
 import {linkAction, showMenu} from "./src/js/menu.js";
 import {scrollActive, scrollHeader, scrollUp} from "./src/js/scroll.js";
 import {switchTheme} from "./src/js/theme.js";
+import {animations} from "./src/js/animations.js";
 
 // constants
 const navLink = document.querySelectorAll('.nav__link');
@@ -20,3 +21,6 @@ window.addEventListener('scroll', scrollUp);
 
 // Switch Theme
 switchTheme();
+
+// Animations
+animations();
