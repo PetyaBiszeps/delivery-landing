@@ -11,6 +11,16 @@
     padding: 2rem 1.5rem;
     border-radius: 1rem;
     text-align: center;
+
+    &:hover {
+      transform: scale(110%);
+      transition: 0.25s ease-in-out;
+    }
+
+    &:not(:hover) {
+      transform: scale(100%);
+      transition: 0.25s ease-in-out;
+    }
   }
 
   &__img {

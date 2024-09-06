@@ -186,6 +186,14 @@
   border-radius: 1rem;
   text-align: center;
 }
+.services__data:hover {
+  transform: scale(110%);
+  transition: 0.25s ease-in-out;
+}
+.services__data:not(:hover) {
+  transform: scale(100%);
+  transition: 0.25s ease-in-out;
+}
 .services__img {
   width: 135px;
   justify-self: center;
